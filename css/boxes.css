@@ -1,0 +1,11 @@
+.middle {
+    left: 50%;
+    right: 50%;
+    position: relative;
+}
+
+.top-left {
+    position: fixed;
+    top 100px;
+    right 0px;
+}
