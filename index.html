@@ -2,42 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>particles.js</title>
+  <title>Hunter Cash | Data Engineer and Developer</title>
   <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
-  <meta name="author" content="Vincent Garreau" />
+  <meta name="author" content="Hunter Cash" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" media="screen" href="css/style.css">
+  <link rel="stylesheet" media="screen" href="css/custom.css">
+  <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
 </head>
 <body>
 
 <!-- particles.js container -->
-<div id="particles-js"><h1>This is a Test</h1></div>
+  <div id="particles-js">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+      <a href="#" class="navbar-brand">HunterCash</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav">
+        <li class="navbar-item">
+          <a href="#" class="nav-link">Link1</a>
+        </li>
+        <li class="navbar-item">
+            <a href="#" class="nav-link">Link2</a>
+        </li>
+        <li class="navbar-item">
+            <a href="#" class="nav-link">Link3</a>
+        </li>
+        <li class="navbar-item">
+            <a href="#" class="nav-link">Link4</a>
+        </li>
+      </ul>
+    </div>
+    </nav>
+<!-- Main Body Container -->
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-4">column</div>
+      <div class="col-4">column</div>
+      <div class="col-4">column</div>
+    </div>
+  </div>
 
 <!-- scripts -->
 <script src="js/particles.js"></script>
 <script src="js/app.js"></script>
-
-<!-- stats.js -->
-
-<script>
-  var count_particles, stats, update;
-  stats = new Stats;
-  stats.setMode(0);
-  stats.domElement.style.position = 'absolute';
-  stats.domElement.style.left = '0px';
-  stats.domElement.style.top = '0px';
-  document.body.appendChild(stats.domElement);
-  count_particles = document.querySelector('.js-count-particles');
-  update = function() {
-    stats.begin();
-    stats.end();
-    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-    }
-    requestAnimationFrame(update);
-  };
-  requestAnimationFrame(update);
-</script>
-
 </body>
 </html>
