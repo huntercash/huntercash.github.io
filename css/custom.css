@@ -35,15 +35,6 @@ canvas{
     width: 30%;
 }
 
-.centered-modal {
-  margin-right: 50%;
-  margin-left: 50%;
-}
-
-h1 {
-  display: inline-flex;
-}
-
 .hero-container {
   display: flex;
   justify-content: center;
@@ -52,7 +43,13 @@ h1 {
 }
 
 .front-modal {
-  display: block;
+  display: inline-block;
+  position: relative;
+}
+
+.front-modal h1 {
+  display: inline-flex;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .particle-wrapper {
@@ -64,10 +61,9 @@ h1 {
   z-index: -1;
 }
 
-.hello {
-  display: block;
-}
-
-.i-am {
-  display: block;
+.helloiam {
+  text-align: center;
+  margin: auto;
+  opacity: 0;
+  color: whitesmoke;
 }
