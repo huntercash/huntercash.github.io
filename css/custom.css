@@ -35,7 +35,39 @@ canvas{
     width: 30%;
 }
 
-.ml3 {
-  font-weight: 900;
-  font-size: 3.5em;
+.centered-modal {
+  margin-right: 50%;
+  margin-left: 50%;
+}
+
+h1 {
+  display: inline-flex;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.front-modal {
+  display: block;
+}
+
+.particle-wrapper {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: -100px;
+  bottom: -100px;
+  z-index: -1;
+}
+
+.hello {
+  display: block;
+}
+
+.i-am {
+  display: block;
 }
