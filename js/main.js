@@ -6,3 +6,4 @@ anime({
   easing: 'easeInOutSine',
   scale:{ value:1.4, delay: 3000}
 });
+
