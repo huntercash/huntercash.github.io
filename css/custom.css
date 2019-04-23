@@ -13,7 +13,6 @@ html{
 
 canvas{
   display:block;
-  vertical-align:bottom;
 }
 
 /* ---- particles.js container ---- */
@@ -66,4 +65,23 @@ canvas{
   margin: auto;
   opacity: 0;
   color: whitesmoke;
+}
+
+footer {
+  position: flex;
+  z-index: 1;
+  color: white;
+}
+
+.footer-wrapper {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: -250px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  height: 250px;
+  background: rgb(32, 36, 47);
+  padding: 20px;
 }
