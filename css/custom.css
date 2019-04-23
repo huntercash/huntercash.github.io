@@ -27,13 +27,6 @@ canvas{
   background-repeat: no-repeat;
 }
 
-.name {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 30%;
-}
-
 .hero-container {
   display: flex;
   justify-content: center;
