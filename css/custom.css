@@ -78,3 +78,7 @@ footer {
   background: rgb(32, 36, 47);
   padding: 20px;
 }
+
+.table-header{
+  margin-top: 20px;
+}
