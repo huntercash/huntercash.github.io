@@ -27,7 +27,7 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Data Analysis</a>
           <div class="dropdown-menu">
-              <a class="dropdown-item" href="weatheranalysis.html">Visualization Dashboard</a>
+              <a class="dropdown-item" href="weatheranalysis.html">Weather Analysis</a>
           </div>
           <li class="navbar-item">
               <a href="#" class="nav-link disabled">About</a>
@@ -40,30 +40,11 @@
 
 <!-- Main Body Container -->
 
-        <!-- <ul class="nav nav-tabs id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Summary</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots</a>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Latitude vs. Temperature</a>
-                    <a class="dropdown-item" href="#">Latitude vs. Humidity</a>
-                    <a class="dropdown-item" href="#">Latitude vs. Cloudiness</a>
-                    <a class="dropdown-item" href="#">Latitude vs. Windspeed</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-              </ul> -->
 <div class="container">
     <br>
 <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Summary</a>
         <a class="nav-item nav-link" id="nav-plots-tab" data-toggle="tab" href="#nav-plots" role="tab" aria-controls="nav-plots" aria-selected="false">Plots</a>
         <a class="nav-item nav-link" id="nav-comparison-tab" data-toggle="tab" href="#nav-comparison" role="tab" aria-controls="nav-comparison" aria-selected="false">Comparison</a>
         <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-data" role="tab" aria-controls="nav-data" aria-selected="false">Data</a>
@@ -83,12 +64,13 @@
                         of latitudes and longitudes using python. The Dataset after assembly contains over 500 cities. </p>
                     <p> After assembling the dataset, we used matplotlib to plot various aspects of the weather vs latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This section of the site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
                 </div>
-                <div class="col col-sm-12 col-lg-5">
+                <div class="col col-sm-12 col-lg-5 col-md-12 col-xs-12">
                     <br>
                         <h2>Visualizations</h2>
                         <hr>
                         <div class="row">
-                                <img src="img/weatheranalysis/Fig1.png" class="shadow-sm weather-image-thumbail" data-toggle="modal" data-target="#FigOneModal">
+                            <div class="col col-lg-6 col-6 col-sm-6 col-md-3 col-xs-12">
+                                <img src="img/weatheranalysis/Fig1.png" class="shadow-sm img-fluid mx-auto" data-toggle="modal" data-target="#FigOneModal">
                                     <!-- Modal One-->
                                       <div class="modal fade" id="FigOneModal" tabindex="-4" role="dialog" aria-labelledby="FigOneModal" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
@@ -109,30 +91,32 @@
                                           </div>
                                         </div>
                                       </div>
-                                      <img src="img/weatheranalysis/Fig2.png" class="shadow-sm weather-image-thumbail" data-toggle="modal" data-target="#FigTwoModal">
-                                    <!-- Modal Two-->
-                                      <div class="modal fade" id="FigTwoModal" tabindex="-4" role="dialog" aria-labelledby="FigTwoModal" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                          <div class="modal-content">
-                                            <div class="modal-header">
-                                              <h5 class="modal-title" id="FigTwoModalLabel">Humidity Vs. Latitude</h5>
-                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                              </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <img src="img/weatheranalysis/Fig2.png" width="100%">
-                                                <br>
-                                            </div>
-                                            <div class="modal-footer">
-                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            </div>
-                                          </div>
+                                    </div>  
+                            <div class="col col-lg-6 col-6 col-sm-6 col-md-3 col-xs-12">
+                                <img src="img/weatheranalysis/Fig2.png" class="shadow-sm img-fluid mx-auto" data-toggle="modal" data-target="#FigTwoModal">
+                            <!-- Modal Two-->
+                                <div class="modal fade" id="FigTwoModal" tabindex="-4" role="dialog" aria-labelledby="FigTwoModal" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="FigTwoModalLabel">Humidity Vs. Latitude</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                            </button>
                                         </div>
-                                      </div>
-                        </div>
-                        <div class="row">
-                                <img src="img/weatheranalysis/Fig3.png" class="shadow-sm weather-image-thumbail" data-toggle="modal" data-target="#FigThreeModal">
+                                        <div class="modal-body">
+                                            <img src="img/weatheranalysis/Fig2.png" width="100%">
+                                            <br>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-lg-6 col-6 col-sm-6 col-md-3 col-xs-12">
+                                <img src="img/weatheranalysis/Fig3.png" class="shadow-sm img-fluid mx-auto" data-toggle="modal" data-target="#FigThreeModal">
                                  <!-- Modal Three-->
                                       <div class="modal fade" id="FigThreeModal" tabindex="-4" role="dialog" aria-labelledby="FigThreeModal" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
@@ -153,7 +137,9 @@
                                           </div>
                                         </div>
                                       </div>
-                                      <img src="img/weatheranalysis/Fig4.png" class="shadow-sm weather-image-thumbail" data-toggle="modal" data-target="#FigFourModal">
+                            </div>
+                            <div class="col col-lg-6 col-6 col-sm-6 col-md-3 col-xs-12">
+                                      <img src="img/weatheranalysis/Fig4.png" class="shadow-sm img-fluid mx-auto" data-toggle="modal" data-target="#FigFourModal">
                                       <!-- Modal Four-->
                                     <div class="modal fade" id="FigFourModal" tabindex="-4" role="dialog" aria-labelledby="FigFourModal" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
@@ -174,8 +160,8 @@
                                         </div>
                                         </div>
                                     </div>
+                            </div>
                         </div>
-
                 </div>
             </div> <!-- Row -->
         </div> <!-- Container -->
@@ -213,8 +199,28 @@
                     </div>
     </div> <!-- Plots -->
     <div class="tab-pane fade" id="nav-comparison" role="tabpanel" aria-labelledby="nav-comparison-tab">
-        <div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <h2>Comparison: Latitude vs. X</h2>
+                <hr>
+                <br>
+                </div>
+                <div class="row">
+                    <div class="col col-lg-6 col-12 col-sm-12 col-md-12 col-xs-12">
+                        <img src="img/weatheranalysis/Fig1.png" class="shadow-sm img-fluid mx-auto">
+                    </div>  
+                    <div class="col col-lg-6 col-12 col-sm-12 col-md-12 col-xs-12">
+                        <img src="img/weatheranalysis/Fig2.png" class="shadow-sm img-fluid mx-auto">
+                    </div>
+                    <div class="col col-lg-6 col-12 col-sm-12 col-md-12 col-xs-12">
+                        <img src="img/weatheranalysis/Fig3.png" class="shadow-sm img-fluid mx-auto">
 
+                    </div>
+                    <div class="col col-lg-6 col-12 col-sm-12 col-md-12 col-xs-12">
+                        <img src="img/weatheranalysis/Fig4.png" class="shadow-sm img-fluid mx-auto">
+                    </div>
+                </div>
         </div>
     </div> <!-- Comparison Tab -->
     <div class="tab-pane fade" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab">
