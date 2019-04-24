@@ -82,3 +82,9 @@ footer {
 .table-header{
   margin-top: 20px;
 }
+
+.weather-image-thumbail {
+  width: 40%;
+  height: 40%;
+  margin: 20px;
+}
