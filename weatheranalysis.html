@@ -22,15 +22,15 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ml-auto">
                 <li class="navbar-item">
-                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
                 </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Data Analysis</a>
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-chart-line"></i> Data Analysis</a>
           <div class="dropdown-menu">
-              <a class="dropdown-item" href="weatheranalysis.html">Weather Analysis</a>
+              <a class="dropdown-item" href="weatheranalysis.html"><i class="fas fa-temperature-high"></i> Weather Analysis</a>
           </div>
           <li class="navbar-item">
-              <a href="#" class="nav-link disabled">About</a>
+              <a href="#" class="nav-link disabled"><i class="fas fa-user"></i> Profile</a>
           </li>
         </ul>
       </div>
@@ -44,10 +44,9 @@
     <br>
 <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Summary</a>
-        <a class="nav-item nav-link" id="nav-plots-tab" data-toggle="tab" href="#nav-plots" role="tab" aria-controls="nav-plots" aria-selected="false">Plots</a>
-        <a class="nav-item nav-link" id="nav-comparison-tab" data-toggle="tab" href="#nav-comparison" role="tab" aria-controls="nav-comparison" aria-selected="false">Comparison</a>
-        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-data" role="tab" aria-controls="nav-data" aria-selected="false">Data</a>
+        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fas fa-laptop-code"></i> Summary</a>
+        <a class="nav-item nav-link" id="nav-comparison-tab" data-toggle="tab" href="#nav-comparison" role="tab" aria-controls="nav-comparison" aria-selected="false"><i class="fas fa-not-equal"></i> Comparison</a>
+        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-data" role="tab" aria-controls="nav-data" aria-selected="false"><i class="fas fa-table"></i> Data</a>
     </div>
 </nav>
 
@@ -55,12 +54,12 @@
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
         <div class="container">
             <div class="row">
-                <div class="col col-sm-12 col-lg-7">
+                <div class="col col-sm-12 col-md-12 col-lg-7">
                     <br>
                         <h2>Summary: Latitude vs. X</h2>
                     <hr>
-                        <img src="img/weatheranalysis/Fig1.png" class="float-left rounded mx-auto d-block" width='450px'>
-                    <p class="text-break">The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplsh this analysis we first pulled data from the OperWeatherMap API after generating a random list
+                        <img src="img/weatheranalysis/Fig1.png" class="float-left rounded mx-auto d-block img-auto" width='420px'>
+                    <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplsh this analysis we first pulled data from the OperWeatherMap API after generating a random list
                         of latitudes and longitudes using python. The Dataset after assembly contains over 500 cities. </p>
                     <p> After assembling the dataset, we used matplotlib to plot various aspects of the weather vs latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This section of the site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
                 </div>
@@ -68,8 +67,11 @@
                     <br>
                         <h2>Visualizations</h2>
                         <hr>
+                        <p>Instead of creating an entirely seperate in depth page, I created four modals that can be accessed by clicking on the visualization thumbnails. </p>
+                        <br>
                         <div class="row">
                             <div class="col col-lg-6 col-6 col-sm-6 col-md-3 col-xs-12">
+                                <p class="text-center font-weight-light">Max Temperature</p>
                                 <img src="img/weatheranalysis/Fig1.png" class="shadow-sm img-fluid mx-auto" data-toggle="modal" data-target="#FigOneModal">
                                     <!-- Modal One-->
                                       <div class="modal fade" id="FigOneModal" tabindex="-4" role="dialog" aria-labelledby="FigOneModal" aria-hidden="true">
@@ -84,6 +86,8 @@
                                             <div class="modal-body">
                                                 <img src="img/weatheranalysis/Fig1.png" width="100%">
                                                 <br>
+                                                <hr>
+                                                <p>As expected, the weather becomes significantly warmer as one approaches the equator (0 Deg. Latitude). More interestingly, however, is the fact that the southern hemisphere tends to be warmer this time of year than the northern hemisphere. This may be due to the tilt of the earth.</p>
                                             </div>
                                             <div class="modal-footer">
                                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -93,6 +97,7 @@
                                       </div>
                                     </div>  
                             <div class="col col-lg-6 col-6 col-sm-6 col-md-3 col-xs-12">
+                                    <p class="text-center font-weight-light">Humidity</p>
                                 <img src="img/weatheranalysis/Fig2.png" class="shadow-sm img-fluid mx-auto" data-toggle="modal" data-target="#FigTwoModal">
                             <!-- Modal Two-->
                                 <div class="modal fade" id="FigTwoModal" tabindex="-4" role="dialog" aria-labelledby="FigTwoModal" aria-hidden="true">
@@ -107,6 +112,8 @@
                                         <div class="modal-body">
                                             <img src="img/weatheranalysis/Fig2.png" width="100%">
                                             <br>
+                                            <hr>
+                                            <p>There seems to be a small relationship between cities with latitudes between -20 and 75 degrees of Latitude. Where there is an increased amount of humidity.</p>
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -116,6 +123,7 @@
                                 </div>
                             </div>
                             <div class="col col-lg-6 col-6 col-sm-6 col-md-3 col-xs-12">
+                                    <p class="text-center font-weight-light">Cloudiness</p>
                                 <img src="img/weatheranalysis/Fig3.png" class="shadow-sm img-fluid mx-auto" data-toggle="modal" data-target="#FigThreeModal">
                                  <!-- Modal Three-->
                                       <div class="modal fade" id="FigThreeModal" tabindex="-4" role="dialog" aria-labelledby="FigThreeModal" aria-hidden="true">
@@ -130,6 +138,8 @@
                                             <div class="modal-body">
                                                 <img src="img/weatheranalysis/Fig3.png" width="100%">
                                                 <br>
+                                                <hr>
+                                                <p>There is no strong relationship between latitude and cloudiness. However, it is interesting to see that a strong band of cities sits at 0, 80, and 100% cloudiness.</p>
                                             </div>
                                             <div class="modal-footer">
                                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -139,6 +149,7 @@
                                       </div>
                             </div>
                             <div class="col col-lg-6 col-6 col-sm-6 col-md-3 col-xs-12">
+                                    <p class="text-center font-weight-light">Wind Speed</p>
                                       <img src="img/weatheranalysis/Fig4.png" class="shadow-sm img-fluid mx-auto" data-toggle="modal" data-target="#FigFourModal">
                                       <!-- Modal Four-->
                                     <div class="modal fade" id="FigFourModal" tabindex="-4" role="dialog" aria-labelledby="FigFourModal" aria-hidden="true">
@@ -153,6 +164,8 @@
                                             <div class="modal-body">
                                                 <img src="img/weatheranalysis/Fig4.png" width="100%">
                                                 <br>
+                                                <hr>
+                                                <p>There is no strong relationship between latitude and wind speed. However, in northern hemispheres there is a flurry of cities with over 20 mph of wind.</p>
                                             </div>
                                             <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -166,60 +179,31 @@
             </div> <!-- Row -->
         </div> <!-- Container -->
     </div> <!-- Home -->
-    <div class="tab-pane fade" id="nav-plots" role="tabpanel" aria-labelledby="nav-plots-tab">
-        <br>
-            <br>
-                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="pills-max" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Max Temperature</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="pills-humidity-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Humidity</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="pills-cloudiness-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Cloudiness</a>
-                    </li>
-                    <li class="nav-item">
-                            <a class="nav-link" id="pills-windspeed-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Wind Speed</a>
-                    </li>
-                </ul>
-                    <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active" id="pills-max" role="tabpanel" aria-labelledby="pills-max-tab">
-
-                        </div>
-                        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                            
-                        </div>
-                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-
-                        </div>
-                        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-
-                        </div>
-                    </div>
-    </div> <!-- Plots -->
     <div class="tab-pane fade" id="nav-comparison" role="tabpanel" aria-labelledby="nav-comparison-tab">
         <br>
         <div class="container">
             <div class="row">
+                <div class="col-12">
                 <h2>Comparison: Latitude vs. X</h2>
                 <hr>
+                <p>View all of the charts together to compare them</p>
                 <br>
                 </div>
                 <div class="row">
                     <div class="col col-lg-6 col-12 col-sm-12 col-md-12 col-xs-12">
-                        <img src="img/weatheranalysis/Fig1.png" class="shadow-sm img-fluid mx-auto">
+                        <img src="img/weatheranalysis/Fig1.png" class="img-fluid mx-auto">
                     </div>  
                     <div class="col col-lg-6 col-12 col-sm-12 col-md-12 col-xs-12">
-                        <img src="img/weatheranalysis/Fig2.png" class="shadow-sm img-fluid mx-auto">
+                        <img src="img/weatheranalysis/Fig2.png" class="img-fluid mx-auto">
                     </div>
                     <div class="col col-lg-6 col-12 col-sm-12 col-md-12 col-xs-12">
-                        <img src="img/weatheranalysis/Fig3.png" class="shadow-sm img-fluid mx-auto">
+                        <img src="img/weatheranalysis/Fig3.png" class="img-fluid mx-auto">
 
                     </div>
                     <div class="col col-lg-6 col-12 col-sm-12 col-md-12 col-xs-12">
-                        <img src="img/weatheranalysis/Fig4.png" class="shadow-sm img-fluid mx-auto">
+                        <img src="img/weatheranalysis/Fig4.png" class="img-fluid mx-auto">
                     </div>
+                </div>
                 </div>
         </div>
     </div> <!-- Comparison Tab -->
