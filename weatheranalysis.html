@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Hunter Cash | Data Engineer and Developer</title>
-  <meta name="description" content="">
+  <title>Hunter Cash | Weather Analysis</title>
+  <meta name="description" content="Weather analysis of cities between -80 and 80 degress latitude">
   <meta name="author" content="Hunter Cash" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -56,21 +56,21 @@
             <div class="row">
                 <div class="col col-sm-12 col-md-12 col-lg-7">
                     <br>
-                        <h2>Summary: Latitude vs. X</h2>
+                        <h3>Summary: Latitude vs. X</h3>
                     <hr>
-                        <img src="img/weatheranalysis/Fig1.png" class="float-left rounded mx-auto d-block img-auto" width='420px'>
+                        <img src="img/weatheranalysis/Fig1.png" class="float-left rounded mx-auto d-block img-auto" style="min-width:380px; max-width:75%; height:auto;">
                     <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplsh this analysis we first pulled data from the OperWeatherMap API after generating a random list
                         of latitudes and longitudes using python. The Dataset after assembly contains over 500 cities. </p>
                     <p> After assembling the dataset, we used matplotlib to plot various aspects of the weather vs latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This section of the site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
                 </div>
-                <div class="col col-sm-12 col-lg-5 col-md-12 col-xs-12">
+                <div class="col col-sm-12 col-lg-5 col-md-12">
                     <br>
-                        <h2>Visualizations</h2>
+                        <h3>Visualizations</h3>
                         <hr>
-                        <p>Instead of creating an entirely seperate in depth page, I created four modals that can be accessed by clicking on the visualization thumbnails. </p>
+                        <p>Click on the graphs below to view in depth analysis</p>
                         <br>
                         <div class="row">
-                            <div class="col col-lg-6 col-6 col-sm-6 col-md-3 col-xs-12">
+                            <div class="col col-lg-6 col-12 col-sm-12 col-md-3">
                                 <p class="text-center font-weight-light">Max Temperature</p>
                                 <img src="img/weatheranalysis/Fig1.png" class="shadow-sm img-fluid mx-auto" data-toggle="modal" data-target="#FigOneModal">
                                     <!-- Modal One-->
@@ -96,7 +96,7 @@
                                         </div>
                                       </div>
                                     </div>  
-                            <div class="col col-lg-6 col-6 col-sm-6 col-md-3 col-xs-12">
+                                    <div class="col col-lg-6 col-12 col-sm-12 col-md-3">
                                     <p class="text-center font-weight-light">Humidity</p>
                                 <img src="img/weatheranalysis/Fig2.png" class="shadow-sm img-fluid mx-auto" data-toggle="modal" data-target="#FigTwoModal">
                             <!-- Modal Two-->
@@ -122,7 +122,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col col-lg-6 col-6 col-sm-6 col-md-3 col-xs-12">
+                            <div class="col col-lg-6 col-12 col-sm-12 col-md-3">
                                     <p class="text-center font-weight-light">Cloudiness</p>
                                 <img src="img/weatheranalysis/Fig3.png" class="shadow-sm img-fluid mx-auto" data-toggle="modal" data-target="#FigThreeModal">
                                  <!-- Modal Three-->
@@ -148,7 +148,7 @@
                                         </div>
                                       </div>
                             </div>
-                            <div class="col col-lg-6 col-6 col-sm-6 col-md-3 col-xs-12">
+                            <div class="col col-lg-6 col-12 col-sm-12 col-md-3">
                                     <p class="text-center font-weight-light">Wind Speed</p>
                                       <img src="img/weatheranalysis/Fig4.png" class="shadow-sm img-fluid mx-auto" data-toggle="modal" data-target="#FigFourModal">
                                       <!-- Modal Four-->
@@ -190,17 +190,17 @@
                 <br>
                 </div>
                 <div class="row">
-                    <div class="col col-lg-6 col-12 col-sm-12 col-md-12 col-xs-12">
+                    <div class="col col-lg-6 col-12 col-sm-12 col-md-12">
                         <img src="img/weatheranalysis/Fig1.png" class="img-fluid mx-auto">
                     </div>  
-                    <div class="col col-lg-6 col-12 col-sm-12 col-md-12 col-xs-12">
+                    <div class="col col-lg-6 col-12 col-sm-12 col-md-12">
                         <img src="img/weatheranalysis/Fig2.png" class="img-fluid mx-auto">
                     </div>
-                    <div class="col col-lg-6 col-12 col-sm-12 col-md-12 col-xs-12">
+                    <div class="col col-lg-6 col-12 col-sm-12 col-md-12">
                         <img src="img/weatheranalysis/Fig3.png" class="img-fluid mx-auto">
 
                     </div>
-                    <div class="col col-lg-6 col-12 col-sm-12 col-md-12 col-xs-12">
+                    <div class="col col-lg-6 col-12 col-sm-12 col-md-12">
                         <img src="img/weatheranalysis/Fig4.png" class="img-fluid mx-auto">
                     </div>
                 </div>
