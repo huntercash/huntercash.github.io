@@ -47,32 +47,112 @@
       <div class="container">
         <div class="row margin-top-50">
           <div class="col-md-2">
-
             <aside class="filters">
               <div class="panel panel-default">
                 <div class="panel-heading text-center">Filter Search</div>
-                <div class="panel-body">
-
-                  <form>
-                    <div class="form-group">
-
-                      <ul class="list-group" id="filters">
-                        <li class="filter list-group-item">
-                          <label for="date">Enter a Date</label>
-                          <input class="form-control" name="dateselector" id="datetime" type="text" value="1/10/2010">
-                        </li>
-                      </ul>
-
-                    </div>
-
-                    <button id="filter-btn" type="submit" class="btn btn-outline-primary btn-sm btn-block">Filter Table</button>
-                  </form>
-
+                    <div class="panel-body">
+                    <form>
+                        <div class="form-group">
+                        <ul class="list-group" id="filters">
+                            <li class="filter list-group-item">
+                            <label for="date">Enter a Date</label>
+                            <input class="form-control" id="datetime" type="text" value="1/10/2010">
+                            </li>
+                        </ul>
+                        </div>
+                        <button id="filter-btn" type="submit" class="btn btn-outline-primary btn-sm btn-block">Filter Table</button>
+                    </form>
+            <br>
+                <div class="text-center">Additional Filters</div>
+            <br>
+            <form>
+                <div class="form-group">
+                <ul class="list-group" id="filters">
+                    <li class="filter list-group-item">
+                    <label for="city">Enter a City</label>
+                    <input class="form-control" id="selectcity" type="text" value="fresno">
+                    </li>
+                </ul>
                 </div>
-              </div>
-            </aside>
+                <button id="filter-city" type="submit" class="btn btn-outline-primary btn-sm btn-block">Filter Table</button>
+            </form>
+            <br>
+            <form>
+                <div class="form-group">
+                <ul class="list-group" id="filters">
+                    <li class="filter list-group-item">
+                    <label for="state">Enter a State</label>
+                    <input class="form-control" id="selectstate" type="text" value="ny">
+                    </li>
+                </ul>
+                </div>
+                <button id="filter-state" type="submit" class="btn btn-outline-primary btn-sm btn-block">Filter Table</button>
+            </form>
+            <br>
+            <form>
+                <div class="form-group">
+                <ul class="list-group" id="filters">
+                    <li class="filter list-group-item">
+                    <label for="state">Enter a Country</label>
+                    <input class="form-control" id="selectcountry" type="text" value="ca">
+                    </li>
+                </ul>
+                </div>
+                <button id="filter-country" type="submit" class="btn btn-outline-primary btn-sm btn-block">Filter Table</button>
+            </form>
+            <br>
+            <form>
+                <div class="form-group">
+                <ul class="list-group" id="filters">
+                    <li class="filter list-group-item">
+                    <label for="state">Enter a Shape</label>
+                    <input class="form-control" id="selectshape" type="text" value="star">
+                    </li>
+                </ul>
+                </div>
+                <button id="filter-shape" type="submit" class="btn btn-outline-primary btn-sm btn-block">Filter Table</button>
+            </form>
 
-          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- <div>
+                        <div class="dropdown mr-1">
+                          <button type="button" class="btn btn-secondary btn-block dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+                            City
+                          </button>
+                          <div class="dropdown-menu" id="citiesList" aria-labelledby="dropdownMenuOffset">
+                          </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <div class="dropdown mr-2">
+                            <button type="button" class="btn btn-secondary btn-block dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+                            State
+                            </button>
+                            <div class="dropdown-menu" id="stateList" aria-labelledby="dropdownMenuOffset">
+                            </div>
+                        </div>
+                    </div> -->
+                    </div> <!-- end panel body -->
+                </div>
+            </aside> <!-- End Right hand bar-->
+          </div> <!-- end col-md-2 -->
+
+
           <div class="col-md-10">
             <div id="table-area" class="">
               <table id="ufo-table" class="table table-striped">
