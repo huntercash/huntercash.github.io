@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
   <link rel="stylesheet" media="screen" href="css/reset.min.css">
   <link rel="stylesheet" media="screen" href="css/custom.css">
   <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
@@ -46,24 +47,31 @@
       <div class="container">
         <div class="row margin-top-50">
           <div class="col-md-2">
+
             <aside class="filters">
               <div class="panel panel-default">
-                <div class="panel-heading">Filter Search</div>
+                <div class="panel-heading text-center">Filter Search</div>
                 <div class="panel-body">
+
                   <form>
                     <div class="form-group">
+
                       <ul class="list-group" id="filters">
                         <li class="filter list-group-item">
                           <label for="date">Enter a Date</label>
-                          <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                          <input class="form-control" name="dateselector" id="datetime" type="text" value="1/10/2010">
                         </li>
                       </ul>
+
                     </div>
-                    <button id="filter-btn" type="submit" class="btn btn-default">Filter Table</button>
+
+                    <button id="filter-btn" type="submit" class="btn btn-outline-primary btn-sm btn-block">Filter Table</button>
                   </form>
+
                 </div>
               </div>
             </aside>
+
           </div>
           <div class="col-md-10">
             <div id="table-area" class="">
@@ -96,7 +104,7 @@
 
 
 <!-- BootStrap and JQuery -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
