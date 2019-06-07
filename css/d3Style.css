@@ -73,13 +73,13 @@ text.statetext {
     display: none;
   }
 
-  .aText {
+  .text {
     font-size: 14px;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .aText {
+  .text {
     font-size: 13px;
   }
 }
