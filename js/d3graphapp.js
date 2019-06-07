@@ -13,8 +13,7 @@ const margin = {
 
 const width = svgWidth - margin.left - margin.right;
 const height = svgHeight - margin.top - margin.bottom;
-
-// Initial Parameters for X axis data.poverty
+// Initial Parameters for X axis data.age
 let chosenXAxis = "age";
 // Initial Parameters for Y axis data.healthcare
 let chosenYAxis = "healthcare";
@@ -77,19 +76,26 @@ function renderStateText(stateTextGroup, newXScale, chosenXAxis){
 
 // function used for updating circles group with new tooltip
 function updateToolTip(chosenXAxis, circlesGroup) {
+  var xlabel = "";
 
-  if (chosenXAxis === "age") {
-    var label = "Age (Median)";
-  }
-  else {
-    var label = "Poverty (%)";
-  }
+switch (chosenXAxis) {
+  case "age":
+    xlabel = "Age (Median) ";
+    break;
+  case "poverty":
+    xlabel = "Poverty (%)";
+    break;
+  case "income":
+    xlabel = "Household Income (Median) $";
+    break;
+}
+
 
   var toolTip = d3.tip()
     .attr("class", "tooltip")
     .offset([-10, 0])
     .html(function(data) {
-      return (`${data.state}<br>${label} ${data[chosenXAxis]}<br>
+      return (`${data.state}<br>${xlabel}${data[chosenXAxis]}<br>
       ${data.healthcare}% Lacks Healthcare`);
     });
 
@@ -177,18 +183,9 @@ d3.csv('data/data.csv').then(censusData => {
       .attr("y", d => yLinearScale(d.healthcare)+ 5)
       .text(d => d.abbr);
 
-
-
   // Create group for 2 x- axis labels
   var labelsGroup = chartGroup.append("g")
     .attr("transform", `translate(${width / 2}, ${height + 20})`);
-
-  var ageMedianLabel = labelsGroup.append("text")
-    .attr("x", 0)
-    .attr("y", 20)
-    .attr("value", "age") // value to grab for event listener
-    .classed("active", true)
-    .text("Age (Median)");
 
   // Define Changing Chart Title
   var chartTitle = chartGroup.append("text")
@@ -198,6 +195,13 @@ d3.csv('data/data.csv').then(censusData => {
     .attr("x", margin.left)
     .text(`Correlation of Health Care Coverage vs. ${chosenXAxis} in United States`);
     
+  var ageMedianLabel = labelsGroup.append("text")
+    .attr("x", 0)
+    .attr("y", 20)
+    .attr("value", "age") // value to grab for event listener
+    .classed("active", true)
+    .text("Age (Median)");
+
   // Define Poverty Percentage Variable
   var povertyPercentageLabel = labelsGroup.append("text")
     .attr("x", 0)
@@ -205,6 +209,13 @@ d3.csv('data/data.csv').then(censusData => {
     .attr("value", "poverty") // value to grab for event listener
     .classed("inactive", true)
     .text("Is In Poverty (%)");
+
+  var houseHoldIncomeLabel = labelsGroup.append("text")
+    .attr("x", 0)
+    .attr("y", 60)
+    .attr("value", "income") // value to grab for event listener
+    .classed("inactive", true)
+    .text("Household Income (Median)");
 
   // append y axis
   chartGroup.append("text")
@@ -246,26 +257,51 @@ d3.csv('data/data.csv').then(censusData => {
         circlesGroup = updateToolTip(chosenXAxis, circlesGroup);
 
         // changes classes to change bold text
-        if (chosenXAxis === "age") {
+        // Comments on this statement aren't necessary. it looks like english.. 
+
+        switch (chosenXAxis) {
+          case "age":
+            ageMedianLabel
+              .classed("active", true)
+              .classed("inactive", false);
+            povertyPercentageLabel
+              .classed("active", false)
+              .classed("inactive", true);
+            houseHoldIncomeLabel
+              .classed("active", false)
+              .classed("inactive", true)
+            chartTitle
+              .text(`Correlation of Health Care Coverage vs. ${chosenXAxis.charAt(0).toUpperCase() + chosenXAxis.slice(1)} in United States`);
+            break;
+          case "poverty":
           ageMedianLabel
+            .classed("active", false)
+            .classed("inactive", true);
+          povertyPercentageLabel
             .classed("active", true)
             .classed("inactive", false);
+          houseHoldIncomeLabel
+            .classed("active", false)
+            .classed("inactive", true)
+          chartTitle
+            .text(`Correlation of Health Care Coverage vs. ${chosenXAxis.charAt(0).toUpperCase() + chosenXAxis.slice(1)} in United States`);
+            break;
+          case "income":
+          ageMedianLabel
+            .classed("active", false)
+            .classed("inactive", true);
           povertyPercentageLabel
             .classed("active", false)
             .classed("inactive", true);
-          chartTitle
-            .text(`Correlation of Health Care Coverage vs. ${chosenXAxis} in United States`);
-        }
-        else {
-          ageMedianLabel
-            .classed("active", false)
-            .classed("inactive", true);
-          povertyPercentageLabel
+          houseHoldIncomeLabel
             .classed("active", true)
-            .classed("inactive", false);
+            .classed("inactive", false)
           chartTitle
-            .text(`Correlation of Health Care Coverage vs. ${chosenXAxis} in United States`);
+            .text(`Correlation of Health Care Coverage vs. ${chosenXAxis.charAt(0).toUpperCase() + chosenXAxis.slice(1)} in United States`);
+            break;
         }
+        
+
       }
-    });
+    })
 });
