@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>D3Times</title>
   <head>
     <meta charset="utf-8">
     <title>Hunter Cash | Data Engineer and Developer</title>
@@ -14,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700" rel="stylesheet">
     <link rel="stylesheet" media="screen" href="css/reset.min.css">
     <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/d3Style.css">
   </head>
   
@@ -48,43 +43,47 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-12 col-xs-12 col-md-12">
+      <div class="col-12">
         <h1>D3Times</h1>
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12  col-md-9">
-        <div id="scatter">
+      <div class="col-12">
+        <div id="scatter" class="col-xl-12">
           <!-- We append our chart here. -->
         </div>
       </div>
     </div>
+    <div class="article">
     <div class="row">
-      <div class="col-xs-12  col-md-9">
-        <div class="article">
+      <div class="col-12">
           <h2>Correlations Discovered Between Health Risks and Age, Income</h2>
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor
-            quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-            ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <hr>
+      </div>
 
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor
-            quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-            ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <div class="col-6">
+              <h3>Age Vs healthcare</h3>
+          <p>There is a general grouping seen between the ages of 36-40 where 12-16% of individuals that are in poverty lack healthcare. Texas has the highest 
+            portion of individuals in poverty that do not have healthcare at an median age of 34, where 24.9% do not have healthcare.
+          </p>
+          </div>
 
-          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor
-            quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-            ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+          <div class="col-6">
+              <h3>Poverty vs healthcare</h3>
+          <p>there is a linear trend for states where the higher the % of the population that is in poverty, also lack healthcare. </p>
+        </div>
+         
         </div>
       </div>
     </div>
-  </div>
+    </div>
 </body>
   <!-- Footer-->
 <footer>
   <div id="footer">
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
   <script type="text/javascript" src="js/d3graphapp.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>

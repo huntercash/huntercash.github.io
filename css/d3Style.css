@@ -1,29 +1,3 @@
-.aText {
-  font-family: sans-serif;
-  font-size: 16px;
-  text-anchor: middle;
-}
-
-.active {
-  font-weight: bold;
-  fill: #000;
-  transition: fill 0.3s ease-out;
-  text-anchor: middle;
-}
-
-.inactive {
-  font-weight: lighter;
-  fill: #c9c9c9;
-  transition: fill 0.3s ease-out;
-  text-anchor: middle;
-}
-
-.inactive:hover {
-  fill: #000;
-  cursor: pointer;
-}
-
-/* font size dependent on radius, see app.js */
 .stateText {
   font-family: sans-serif;
   fill: #fff;
@@ -31,26 +5,67 @@
 }
 
 .stateCircle {
-  fill: #89bdd3;
+  fill:lightslategrey;
   stroke: #e3e3e3;
 }
 
-.chart {
-  display: block;
-  margin: 0;
+.tooltip {
+  position: absolute;
+  width: 135px;
+  height: 60px;
+  padding: 2px;
+  padding-top: 8px;
+  font: 12px sans-serif;
+  text-align: center;
+  background:lightblue;
+  border: 0;
+  border-radius: 10px;
+}
+/* #scatter {
+  background-image: url("../img/graph.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+} */
+
+text.active {
+  font-weight: bold;
+  fill: #000;
+  transition: fill 0.3s ease-out;
+  text-anchor: middle;
 }
 
-.d3-tip {
-  padding: 6px;
-  font-size: 12px;
-  line-height: 1;
-  line-height: 1.5em;
-  color: #fff;
-  text-align: center;
-  text-transform: capitalize;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 4px;
+text.inactive {
+  font-weight: lighter;
+  fill: #000;
+  transition: fill 0.3s ease-out;
+  text-anchor: middle;
 }
+
+text.inactive:hover {
+  cursor: pointer;
+  font-weight: bolder;
+  transition: fill 0.3s ease-out;
+}
+
+circle:hover {
+  /* opacity: 1; */
+  fill: lightblue;
+  transition: fill 0.2s ease-in;
+}
+
+circle {
+  transition: fill 0.5s ease-out;
+}
+
+#charttitle {
+  font-weight: bolder;
+};
+
+text.statetext {
+  font-family: sans-serif;
+  fill: #fff;
+};
 
 /* Mobile Rules */
 @media screen and (max-width: 530px) {
