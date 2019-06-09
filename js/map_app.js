@@ -3,14 +3,30 @@ function createMap(earthQuakes) {
   // Create the tile layer that will be the background of our map
   var darkmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/256/{z}/{x}/{y}?access_token={accessToken}", {
     attribution: "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"http://mapbox.com\">Mapbox</a>",
-    maxZoom: 3,
+    maxZoom: 9,
     id: "mapbox.dark",
+    accessToken: API_KEY
+  });
+
+  var lightmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}?access_token={accessToken}", {
+    attribution: "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"http://mapbox.com\">Mapbox</a>",
+    maxZoom: 9,
+    id: "mapbox.light",
+    accessToken: API_KEY
+  });
+
+  var satmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/256/{z}/{x}/{y}?access_token={accessToken}", {
+    attribution: "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"http://mapbox.com\">Mapbox</a>",
+    maxZoom: 9,
+    id: "mapbox.satmap",
     accessToken: API_KEY
   });
 
   // Create a baseMaps object to hold the dark map layer
   var baseMaps = {
-    "Dark Map": darkmap
+    "Dark Map": darkmap,
+    "Light Map": lightmap,
+    "Satellite Map": satmap
   };
 
   // Create an overlayMaps object to hold the earthquakes layer
@@ -21,7 +37,7 @@ function createMap(earthQuakes) {
   // Create the map object with options
   var map = L.map("map-id", {
     center: [38.2321223, -97.3245531], //kansas.. haha
-    zoom: 20,
+    zoom: 3,
     layers: [darkmap, earthQuakes]
   });
 
