@@ -2,16 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Citi Bike</title>
-
-  <!-- Leaflet CSS -->
+  <meta charset="utf-8">
+  <title>Hunter Cash | Leaflet, Mapbox, D3, and .geojson Data</title>
+  <meta name="description" content="Data Engineer and Developer">
+  <meta name="author" content="Hunter Cash" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" media="screen" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
   crossorigin=""/>
-
-  <!-- Our CSS -->
   <link rel="stylesheet" type="text/css" href="css/mapstyle.css">
 </head>
+
+<header>
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+      <a href="index.html" class="navbar-brand">HC</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" >
+        <i class="fa fa-angle-double-down"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+              <li class="navbar-item">
+                  <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+              </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-chart-line"></i> Data Analysis</a>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="weatheranalysis.html"><i class="fas fa-temperature-high"></i> Weather Analysis</a>
+            <a class="dropdown-item" href="javascript.html"><i class="fab fa-js"></i> D3 Example</a>
+            <a class="dropdown-item" href="d3-graphing.html"><i class="fab fa-js"></i> D3 Graphing</a>
+            <a class="dropdown-item" href="leaflet.html"><i class="fas fa-leaf"></i> Leaflet.js</a>
+        </div>
+        <li class="navbar-item">
+            <a href="#" class="nav-link disabled"><i class="fas fa-user"></i> Profile</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+</header>
 <body>
 
   <!-- The div that holds our map -->
@@ -19,6 +48,12 @@
 
   <!-- D3 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
 
   <!-- Leaflet JavaScript -->
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
