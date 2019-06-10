@@ -1,28 +1,5 @@
-// var options = {
-//   enableHighAccuracy: true,
-//   timeout: 5000,
-//   maximumAge: 0
-// };
-// function getLat(){
-//   function success(pos) {
-//     var crd = pos.coords;
-//     var myLat = crd.latitude;
-//     var myLong = crd.longitude;
-//     console.log('Your current position is:');
-//     console.log(`Latitude : ${myLat}`);
-//     console.log(`Longitude: ${myLong}`);
-//     console.log(`More or less ${myLong} meters.`);
-//     return myLat, myLong;
-//   }
-// };
-
-// function error(err) {
-//   console.warn(`ERROR(${err.code}): ${err.message}`);
-// }
-
-// navigator.geolocation.getCurrentPosition(success, error, options);
-
-// console.log(navigator.geolocation.getCurrentPosition(myLat));
+// Get users current location
+navigator.geolocation.getCurrentPosition(function(location) {
 
   // Create tile map layers to add to tool tip 
 var darkmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/256/{z}/{x}/{y}?access_token={accessToken}", {
@@ -56,11 +33,11 @@ var layers = {
   fivePlus: new L.LayerGroup()
 };
 
-var time = new Date();
-
+// error handling 
+if ("geolocation" in navigator) {
 // Create the map object with options
 var map = L.map("map-id", {
-  center: [38.114793, -113.487747],
+  center: [location.coords.latitude, location.coords.longitude],
   zoom: 4,
   layers: [
           layers.zeroOne,
@@ -70,7 +47,25 @@ var map = L.map("map-id", {
           layers.fourFive,
           layers.fivePlus
         ]
+        
 });
+  console.log("geolocation is available");
+} else {
+  var map = L.map("map-id", {
+    center: [11.6736127, 118.1260972],
+    zoom: 4,
+    layers: [
+            layers.zeroOne,
+            layers.oneTwo,
+            layers.twoThree,
+            layers.threeFour,
+            layers.fourFive,
+            layers.fivePlus
+          ]
+  });
+  console.log("geolocation is NOT available");
+};
+
 
 // Add darkmap layer to the map
 darkmap.addTo(map);
@@ -140,6 +135,7 @@ var circleIcons = {
   }
 };
 
+// Function to build everything
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson", function(response) {
   
   // Pull the "features from the geo json"
@@ -209,7 +205,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojs
     updateLegend(quakes, earthQuakeCount);
   });
 
-
+});
 
   function updateLegend(self, earthQuakeCount) {
     document.querySelector(".legend").innerHTML = [`Earthquake Magnitude:<hr>
