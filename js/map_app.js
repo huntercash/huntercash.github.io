@@ -1,3 +1,29 @@
+// var options = {
+//   enableHighAccuracy: true,
+//   timeout: 5000,
+//   maximumAge: 0
+// };
+// function getLat(){
+//   function success(pos) {
+//     var crd = pos.coords;
+//     var myLat = crd.latitude;
+//     var myLong = crd.longitude;
+//     console.log('Your current position is:');
+//     console.log(`Latitude : ${myLat}`);
+//     console.log(`Longitude: ${myLong}`);
+//     console.log(`More or less ${myLong} meters.`);
+//     return myLat, myLong;
+//   }
+// };
+
+// function error(err) {
+//   console.warn(`ERROR(${err.code}): ${err.message}`);
+// }
+
+// navigator.geolocation.getCurrentPosition(success, error, options);
+
+// console.log(navigator.geolocation.getCurrentPosition(myLat));
+
   // Create tile map layers to add to tool tip 
 var darkmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/256/{z}/{x}/{y}?access_token={accessToken}", {
   attribution: "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"http://mapbox.com\">Mapbox</a>",
