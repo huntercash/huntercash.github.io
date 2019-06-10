@@ -34,7 +34,7 @@ var time = new Date();
 
 // Create the map object with options
 var map = L.map("map-id", {
-  center: [38.2321223, -97.3245531], //kansas.. haha
+  center: [38.114793, -113.487747],
   zoom: 4,
   layers: [
           layers.zeroOne,
