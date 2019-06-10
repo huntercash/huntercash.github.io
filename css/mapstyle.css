@@ -19,25 +19,44 @@ body,
 }
 
 .legend .zeroOne {
-  color: lightgreen;
+  color: #000;
+  border: 1px solid black;
+  padding: 2px;
+  background-color: lightgreen;
+  
 }
 
 .legend .oneTwo {
-  color: darkgreen;
+  color: #000;
+  border: 1px solid black;
+  padding: 2px;
+  background-color: darkgreen;
 }
 
 .legend .twoThree {
-  color: yellow;
+  color: #000;
+  border: 1px solid black;
+  padding: 2px;
+  background-color: yellow;
 }
 
 .legend .threeFour {
-  color: orange;
+  color: #000;
+  border: 1px solid black;
+  padding: 2px;
+  background-color: orange;
 }
 
 .legend .fourFive {
-  color: orangered;
+  color: #000;
+  border: 1px solid black;
+  padding: 2px;
+  background-color: orangered;
 }
 
 .legend .fivePlus {
-  color: red;
+  color: #000;
+  border: 1px solid black;
+  padding: 2px;
+  background-color: red;
 }
