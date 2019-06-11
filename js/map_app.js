@@ -1,5 +1,5 @@
 // Get users current location
-navigator.geolocation.getCurrentPosition(function(location) {
+// navigator.geolocation.getCurrentPosition(function(location) {
 
   // Create tile map layers to add to tool tip 
 var darkmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/256/{z}/{x}/{y}?access_token={accessToken}", {
@@ -33,24 +33,24 @@ var layers = {
   fivePlus: new L.LayerGroup()
 };
 
-// error handling 
-if ("geolocation" in navigator) {
-// Create the map object with options
-var map = L.map("map-id", {
-  center: [location.coords.latitude, location.coords.longitude],
-  zoom: 4,
-  layers: [
-          layers.zeroOne,
-          layers.oneTwo,
-          layers.twoThree,
-          layers.threeFour,
-          layers.fourFive,
-          layers.fivePlus
-        ]
+// // error handling 
+// if ("geolocation" in navigator) {
+// // Create the map object with options
+// var map = L.map("map-id", {
+//   center: [location.coords.latitude, location.coords.longitude],
+//   zoom: 4,
+//   layers: [
+//           layers.zeroOne,
+//           layers.oneTwo,
+//           layers.twoThree,
+//           layers.threeFour,
+//           layers.fourFive,
+//           layers.fivePlus
+//         ]
         
-});
-  console.log("geolocation is available");
-} else {
+// });
+//   console.log("geolocation is available");
+// } else {
   var map = L.map("map-id", {
     center: [11.6736127, 118.1260972],
     zoom: 4,
@@ -63,8 +63,8 @@ var map = L.map("map-id", {
             layers.fivePlus
           ]
   });
-  console.log("geolocation is NOT available");
-};
+//   console.log("geolocation is NOT available");
+// };
 
 
 // Add darkmap layer to the map
@@ -205,7 +205,7 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojs
     updateLegend(quakes, earthQuakeCount);
   });
 
-});
+// });
 
   function updateLegend(self, earthQuakeCount) {
     document.querySelector(".legend").innerHTML = [`Earthquake Magnitude:<hr>
